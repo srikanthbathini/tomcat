@@ -12,6 +12,8 @@ RUN tar -xvf /opt/apa*
 
 RUN chmod -R 777 /opt/
 
+COPY target/*.war /apache-tomcat-8.5.56/webapps
+
 EXPOSE 8080
 
 CMD /apache-tomcat-8.5.56/bin/catalina.sh run
